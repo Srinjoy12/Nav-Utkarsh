@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suggest Support — Nav Utkarsh</title>
+  <meta name="description" content="Tell Nav Utkarsh what support you need for rural development.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+</head>
+<body>
+  <nav class="navbar scrolled" id="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__brand"><div class="navbar__logo-text"><span class="navbar__name">Nav Utkarsh</span><span class="navbar__tagline">Inspiring Roots, Elevating Excellence</span></div></a>
+      <div class="navbar__links" id="navLinks">
+        <a href="index.html" class="navbar__link">Home</a>
+        <a href="about.html" class="navbar__link">About</a>
+
+        <a href="experience.html" class="navbar__link">Experiences</a>
+
+        <a href="contact.html" class="navbar__link">Contact</a>
+        <a href="contact.html" class="btn btn--primary btn--sm navbar__cta">Get in Touch</a>
+      </div>
+      <button class="navbar__toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+
+
+  <section class="section">
+    <div class="container">
+      <div class="form-container">
+        <div class="form-section">
+          <h3 class="form-section__title" style="justify-content:center;text-align:center;">Areas We Can Support</h3>
+          <p class="form-section__desc" style="text-align:center;">Here are some examples. You are welcome to share any idea.</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-sm);margin-top:var(--space-lg);">
+            <div style="display:flex;align-items:center;gap:var(--space-sm);padding:var(--space-xs) var(--space-sm);font-size:var(--fs-small);color:var(--color-text-secondary);">✓ Rural development coaching</div>
+            <div style="display:flex;align-items:center;gap:var(--space-sm);padding:var(--space-xs) var(--space-sm);font-size:var(--fs-small);color:var(--color-text-secondary);">✓ INRM and livelihood advisory</div>
+            <div style="display:flex;align-items:center;gap:var(--space-sm);padding:var(--space-xs) var(--space-sm);font-size:var(--fs-small);color:var(--color-text-secondary);">✓ CSO capacity strengthening</div>
+            <div style="display:flex;align-items:center;gap:var(--space-sm);padding:var(--space-xs) var(--space-sm);font-size:var(--fs-small);color:var(--color-text-secondary);">✓ Participatory planning support</div>
+            <div style="display:flex;align-items:center;gap:var(--space-sm);padding:var(--space-xs) var(--space-sm);font-size:var(--fs-small);color:var(--color-text-secondary);">✓ Training &amp; mentoring workshops</div>
+            <div style="display:flex;align-items:center;gap:var(--space-sm);padding:var(--space-xs) var(--space-sm);font-size:var(--fs-small);color:var(--color-text-secondary);">✓ Documentation &amp; learning</div>
+            <div style="display:flex;align-items:center;gap:var(--space-sm);padding:var(--space-xs) var(--space-sm);font-size:var(--fs-small);color:var(--color-text-secondary);">✓ Project proposal &amp; DPR</div>
+            <div style="display:flex;align-items:center;gap:var(--space-sm);padding:var(--space-xs) var(--space-sm);font-size:var(--fs-small);color:var(--color-text-secondary);">✓ Leadership development</div>
+          </div>
+        </div>
+
+        <form data-form-type="suggestions" id="suggestForm">
+          <div class="form-section">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="sug-name">Your Name <span class="optional">(optional)</span></label>
+                <input type="text" id="sug-name" name="name" class="form-input" placeholder="Your name">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="sug-email">Email <span class="optional">(optional)</span></label>
+                <input type="email" id="sug-email" name="email" class="form-input" placeholder="your@email.com">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="sug-org">Organization <span class="optional">(optional)</span></label>
+                <input type="text" id="sug-org" name="organization" class="form-input" placeholder="Your organization">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="sug-location">Location <span class="optional">(optional)</span></label>
+                <input type="text" id="sug-location" name="location" class="form-input" placeholder="State / Country">
+              </div>
+            </div>
+          </div>
+          <div class="form-section">
+            <div class="form-group">
+              <label class="form-label" for="sug-support">What support would you like? <span class="required">*</span></label>
+              <textarea id="sug-support" name="support_needed" class="form-textarea form-textarea--lg" data-maxlength="3000" placeholder="Describe the kind of support, mentoring, training, or consultancy that would be most useful..." required></textarea>
+              <div class="char-counter">0 / 3000</div>
+              <span class="form-error">Please describe the support you need.</span>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn--primary btn--lg">Submit Your Suggestion</button>
+          </div>
+        </form>
+
+        <div class="form-success">
+          <div class="form-success__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h3 class="form-success__title">Thank You!</h3>
+          <p class="form-success__text">Your input will directly shape the services Nav Utkarsh develops.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__bottom">
+        <span>&copy; 2025 Nav Utkarsh. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>
