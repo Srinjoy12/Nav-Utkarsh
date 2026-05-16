@@ -27,6 +27,9 @@
   height: 420px;
   object-fit: cover;
 }
+@media (max-width: 768px) {
+  .about-intro__img-wrapper img { height: 320px; }
+}
 
 .about-intro__badge {
   position: absolute;
@@ -110,6 +113,9 @@
   color: var(--color-text-light);
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+@media (max-width: 600px) {
+  .about-intro__stats { grid-template-columns: 1fr; gap: var(--space-md); }
 }
 
 @media (max-width: 900px) {
@@ -576,6 +582,10 @@
   font-size: var(--fs-body-lg);
   line-height: 1.9;
   color: var(--color-text-secondary);
+}
+@media (max-width: 768px) {
+  .story-section { padding: var(--space-xl); }
+  .story-section p { font-size: var(--fs-body); line-height: 1.7; }
 }
 
 /* --- Mission/Vision Cards --- */

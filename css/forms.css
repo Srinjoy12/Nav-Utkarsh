@@ -12,6 +12,9 @@
   max-width: 720px;
   margin: 0 auto;
 }
+@media (max-width: 768px) {
+  .form-container { padding: var(--space-xl); }
+}
 
 .form-container--wide {
   max-width: 850px;
@@ -28,6 +31,19 @@
   border-bottom: none;
   margin-bottom: var(--space-lg);
   padding-bottom: 0;
+}
+
+.support-areas-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+}
+
+@media (max-width: 600px) {
+  .support-areas-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .form-section__title {

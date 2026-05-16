@@ -42,11 +42,11 @@
   --font-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-body: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
-  --fs-display: clamp(2.5rem, 5vw, 4rem);
-  --fs-h1: clamp(2.5rem, 5vw, 4rem);
-  --fs-h2: clamp(1.8rem, 3.5vw, 2.8rem);
-  --fs-h3: clamp(1.3rem, 2.5vw, 1.8rem);
-  --fs-h4: clamp(1.1rem, 2vw, 1.35rem);
+  --fs-display: clamp(2.2rem, 8vw, 4rem);
+  --fs-h1: clamp(2rem, 7vw, 3.5rem);
+  --fs-h2: clamp(1.6rem, 5vw, 2.5rem);
+  --fs-h3: clamp(1.2rem, 4vw, 1.8rem);
+  --fs-h4: clamp(1.1rem, 3vw, 1.35rem);
   --fs-body: 1rem;
   --fs-body-lg: 1.125rem;
   --fs-small: 0.875rem;
@@ -147,10 +147,16 @@ p { margin-bottom: var(--space-md); color: var(--color-text-secondary); }
   margin: 0 auto;
   padding: 0 var(--space-xl);
 }
+@media (max-width: 768px) {
+  .container { padding: 0 var(--space-lg); }
+}
 
 .section {
   padding: var(--space-5xl) 0;
   position: relative;
+}
+@media (max-width: 768px) {
+  .section { padding: var(--space-3xl) 0; }
 }
 .section--dark {
   background: var(--color-bg-dark);
@@ -420,11 +426,18 @@ p { margin-bottom: var(--space-md); color: var(--color-text-secondary); }
   background: transparent;
 }
 .navbar.scrolled {
-  background: rgba(26, 46, 26, 0.95);
+  background: rgba(26, 46, 26, 0.98);
   backdrop-filter: blur(16px);
   padding: 0.5rem 0;
   box-shadow: 0 2px 20px rgba(0,0,0,0.15);
 }
+
+/* Light background override for better contrast on interior pages */
+.navbar--light:not(.scrolled) .navbar__name { color: var(--color-primary-dark); }
+.navbar--light:not(.scrolled) .navbar__link { color: var(--color-text-secondary); }
+.navbar--light:not(.scrolled) .navbar__link:hover { color: var(--color-primary); }
+.navbar--light:not(.scrolled) .navbar__toggle span { background: var(--color-primary-dark); }
+
 .navbar__inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -514,21 +527,30 @@ p { margin-bottom: var(--space-md); color: var(--color-text-secondary); }
 }
 
 @media (max-width: 768px) {
-  .navbar__toggle { display: flex; }
+  .navbar { background: rgba(26, 46, 26, 0.98); } /* Force dark bg on mobile for contrast */
+  .navbar__toggle { display: flex; z-index: calc(var(--z-fixed) + 1); }
   .navbar__links {
     position: fixed;
     top: 0; right: -100%;
     width: 280px; height: 100vh;
     background: var(--color-primary-dark);
     flex-direction: column;
-    padding: 5rem var(--space-2xl) var(--space-2xl);
-    gap: var(--space-lg);
-    transition: right var(--transition-slow);
+    padding: 6rem var(--space-2xl) var(--space-2xl);
+    gap: var(--space-xl);
+    transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     z-index: var(--z-fixed);
     align-items: flex-start;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.2);
   }
-  .navbar__links.active { right: 0; }
-  .nav-overlay.active { display: block; }
+  .navbar__links.open { right: 0; }
+  .nav-overlay.active { display: block; opacity: 1; }
+  
+  .navbar__link {
+    font-size: 0.9rem;
+    width: 100%;
+    padding: var(--space-sm) 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
 }
 
 /* --- Taped Card Footer --- */
@@ -883,8 +905,22 @@ p { margin-bottom: var(--space-md); color: var(--color-text-secondary); }
   max-height: 740px;
   overflow: hidden;
   /* Top and bottom fade mask */
-  mask-image: linear-gradient(to bottom, transparent, black 25%, black 75%, transparent);
-  -webkit-mask-image: linear-gradient(to bottom, transparent, black 25%, black 75%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+}
+@media (max-width: 1024px) {
+  .testi-container { max-height: 600px; gap: var(--space-md); }
+}
+@media (max-width: 768px) {
+  .testi-container { 
+    flex-direction: column; 
+    max-height: 1200px; 
+    mask-image: none; 
+    -webkit-mask-image: none; 
+    overflow: visible;
+  }
+  .testi-col-wrapper:nth-child(n+2) { display: none; } /* Show only 1 col on mobile */
+  .testi-col { animation: none; padding: 0; }
 }
 
 .testi-col-wrapper {
@@ -922,6 +958,10 @@ p { margin-bottom: var(--space-md); color: var(--color-text-secondary); }
   line-height: 1.7;
   margin-bottom: var(--space-lg);
   font-style: italic;
+}
+@media (max-width: 768px) {
+  .testi-card { padding: var(--space-xl); max-width: 100%; }
+  .testi-card__text { font-size: 0.85rem; line-height: 1.6; }
 }
 
 .testi-card__author {
