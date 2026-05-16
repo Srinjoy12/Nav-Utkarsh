@@ -624,3 +624,101 @@
     grid-template-columns: 1fr !important;
   }
 }
+/* --- Partners Section --- */
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--space-xl);
+  align-items: center;
+  justify-items: center;
+  margin-bottom: var(--space-4xl);
+}
+
+.partner-logo {
+  width: 100%;
+  max-width: 160px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: grayscale(100%) opacity(0.6);
+  transition: all var(--transition-base);
+}
+
+.partner-logo:hover {
+  filter: grayscale(0%) opacity(1);
+  transform: scale(1.05);
+}
+
+.partner-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* --- Partners Marquee --- */
+.partners-marquee-wrapper {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding: var(--space-xl) 0;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border-light);
+}
+
+.partners-marquee {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--space-xl);
+}
+
+.partners-marquee__track {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: var(--space-xl);
+  min-width: 100%;
+  animation: marqueeScroll 40s linear infinite;
+}
+
+.partners-marquee--reverse .partners-marquee__track {
+  animation-direction: reverse;
+}
+
+.partners-marquee span {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-light);
+  white-space: nowrap;
+  padding: 0.5rem 1.5rem;
+  background: #fff;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border-light);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+}
+
+.partners-marquee span:hover {
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+@keyframes marqueeScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-100% - var(--space-xl))); }
+}
+
+@media (max-width: 768px) {
+  .partners-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .partners-marquee__track {
+    animation-duration: 30s;
+  }
+}
