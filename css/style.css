@@ -168,11 +168,8 @@ p { margin-bottom: var(--space-md); color: var(--color-text-secondary); }
 .section--cream { background: var(--color-bg-cream); }
 .section--alt { background: var(--color-bg-warm); }
 
-/* --- Label Badge (like "● COMMUNITY & NONPROFIT") --- */
 .section-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
+  display: block;
   font-family: var(--font-heading);
   font-size: var(--fs-label);
   font-weight: 700;
@@ -180,22 +177,10 @@ p { margin-bottom: var(--space-md); color: var(--color-text-secondary); }
   text-transform: uppercase;
   color: var(--color-text-light);
   margin-bottom: var(--space-lg);
-  padding: 0.4rem 1rem;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-full);
   width: fit-content;
-}
-.section-label::before {
-  content: '';
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--color-accent);
-  flex-shrink: 0;
 }
 .section--dark .section-label {
   color: var(--color-accent);
-  border-color: rgba(200, 230, 49, 0.3);
 }
 
 .section-header {
