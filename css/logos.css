@@ -73,6 +73,53 @@
   color: var(--color-primary);
 }
 
+/* --- Metrics Row --- */
+.logo-cloud__metrics {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-xl);
+  margin: var(--space-xl) auto var(--space-3xl) auto;
+  padding: var(--space-xl) var(--space-xl);
+  max-width: 900px;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.logo-cloud__metric {
+  text-align: center;
+  flex: 1;
+  min-width: 160px;
+}
+
+.logo-cloud__metric-num {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 0.25rem;
+}
+
+.logo-cloud__metric-label {
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 768px) {
+  .logo-cloud__metrics {
+    gap: var(--space-lg);
+    padding: var(--space-lg) var(--space-md);
+  }
+  .logo-cloud__metric-num {
+    font-size: 1.8rem;
+  }
+}
+
 @keyframes logo-scroll {
   from { transform: translateX(0); }
   to { transform: translateX(-20%); }
