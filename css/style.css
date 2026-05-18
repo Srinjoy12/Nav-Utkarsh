@@ -438,9 +438,10 @@ p { margin-bottom: var(--space-md); color: var(--color-text-secondary); }
   gap: 0;
 }
 .navbar__logo-img {
-  height: 48px !important;
-  width: auto !important;
-  border-radius: 6px !important;
+  height: 50px !important;
+  width: 50px !important;
+  object-fit: cover !important;
+  border-radius: 50% !important;
   margin-right: 10px !important;
 }
 .navbar__logo-text { display: flex; flex-direction: column; }
