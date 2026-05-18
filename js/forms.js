@@ -131,6 +131,39 @@ document.addEventListener('DOMContentLoaded', () => {
         submitBtn.textContent = 'Submitted!';
       }
 
+      // Open Mail Client with Form Content prefilled
+      if (data._formType === 'suggestions') {
+        const subject = encodeURIComponent('Support Required from Navkarsh Advisory');
+        const emailBody = 
+`Name: ${data.name || ''}
+Designation: ${data.designation || ''}
+Organisation: ${data.organisation || ''}
+Contact No.: ${data.contact_no || ''}
+Email ID: ${data.email || ''}
+
+Support Required from Navkarsh Advisory:
+${data.support_needed || ''}`;
+
+        const mailtoUrl = `mailto:navkarsh.sumit@gmail.com?subject=${subject}&body=${encodeURIComponent(emailBody)}`;
+        window.location.href = mailtoUrl;
+      } else if (data._formType === 'experience') {
+        const subject = encodeURIComponent('New Story/Testimonial Shared');
+        const emailBody = 
+`Name: ${data.name || 'Anonymous'}
+Role: ${data.role || ''}
+Organization: ${data.organization || ''}
+Location: ${data.location || ''}
+Context: ${data.context || ''}
+
+Experience / Testimonial:
+${data.story || ''}
+
+Consent Shared: ${data.consent === 'yes' ? 'Yes' : 'No'}`;
+
+        const mailtoUrl = `mailto:navkarsh.sumit@gmail.com?subject=${subject}&body=${encodeURIComponent(emailBody)}`;
+        window.location.href = mailtoUrl;
+      }
+
       console.log(`Form submitted (${data._formType}):`, data);
     });
   });

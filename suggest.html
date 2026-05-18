@@ -56,35 +56,41 @@
           <div class="form-section">
             <div class="form-row">
               <div class="form-group">
-                <label class="form-label" for="sug-name">Your Name <span class="optional">(optional)</span></label>
-                <input type="text" id="sug-name" name="name" class="form-input" placeholder="Your name">
+                <label class="form-label" for="sug-name">Name <span class="required">*</span></label>
+                <input type="text" id="sug-name" name="name" class="form-input" placeholder="Your Name" required>
               </div>
               <div class="form-group">
-                <label class="form-label" for="sug-email">Email <span class="optional">(optional)</span></label>
-                <input type="email" id="sug-email" name="email" class="form-input" placeholder="your@email.com">
+                <label class="form-label" for="sug-designation">Designation <span class="required">*</span></label>
+                <input type="text" id="sug-designation" name="designation" class="form-input" placeholder="Your Designation" required>
               </div>
             </div>
             <div class="form-row">
               <div class="form-group">
-                <label class="form-label" for="sug-org">Organization <span class="optional">(optional)</span></label>
-                <input type="text" id="sug-org" name="organization" class="form-input" placeholder="Your organization">
+                <label class="form-label" for="sug-org">Organisation <span class="required">*</span></label>
+                <input type="text" id="sug-org" name="organisation" class="form-input" placeholder="Your Organisation" required>
               </div>
               <div class="form-group">
-                <label class="form-label" for="sug-location">Location <span class="optional">(optional)</span></label>
-                <input type="text" id="sug-location" name="location" class="form-input" placeholder="State / Country">
+                <label class="form-label" for="sug-phone">Contact No. <span class="required">*</span></label>
+                <input type="tel" id="sug-phone" name="contact_no" class="form-input" placeholder="Your Contact Number" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group" style="flex: 1 1 100%;">
+                <label class="form-label" for="sug-email">Email ID <span class="required">*</span></label>
+                <input type="email" id="sug-email" name="email" class="form-input" placeholder="yourname@domain.com" required>
               </div>
             </div>
           </div>
           <div class="form-section">
             <div class="form-group">
-              <label class="form-label" for="sug-support">What support would you like? <span class="required">*</span></label>
-              <textarea id="sug-support" name="support_needed" class="form-textarea form-textarea--lg" data-maxlength="3000" placeholder="Describe the kind of support, mentoring, training, or consultancy that would be most useful..." required></textarea>
+              <label class="form-label" for="sug-support">Support Required from Navkarsh Advisory <span class="required">*</span></label>
+              <textarea id="sug-support" name="support_needed" class="form-textarea form-textarea--lg" data-maxlength="3000" placeholder="Describe the kind of support, coaching, or consultancy required..." required></textarea>
               <div class="char-counter">0 / 3000</div>
               <span class="form-error">Please describe the support you need.</span>
             </div>
           </div>
           <div class="form-actions">
-            <button type="submit" class="btn btn--primary btn--lg">Submit Your Suggestion</button>
+            <button type="submit" class="btn btn--primary btn--lg">Submit</button>
           </div>
         </form>
 
