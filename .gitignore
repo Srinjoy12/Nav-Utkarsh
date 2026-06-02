@@ -1,2 +1,7 @@
 # Local Netlify folder
 .netlify
+
+# Local backups and system files
+assets/images_backup/
+.DS_Store
+**/.DS_Store
