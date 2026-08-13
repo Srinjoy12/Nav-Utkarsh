@@ -263,9 +263,40 @@ html, body {
   .expertise-grid,
   .values-grid,
   .mission-vision,
-  .orgdev-grid {
+  .orgdev-grid,
+  .bento-testimonials-grid {
     grid-template-columns: 1fr !important;
+    display: flex !important;
+    flex-direction: column !important;
     gap: 1.25rem !important;
+  }
+
+  .vm-card,
+  .focus-card,
+  .expertise-card,
+  .expertise-card-v2,
+  .value-card,
+  .mv-card,
+  .card,
+  .card--glass,
+  .bento-testimonial-card {
+    padding: 1.5rem 1.25rem !important;
+    border-radius: 1.25rem !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .bento-testimonial-quote {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  .bento-testimonial-avatar {
+    width: 44px !important;
+    height: 44px !important;
   }
 
   .vm-card,
