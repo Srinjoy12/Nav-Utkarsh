@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/home.css">
   <link rel="stylesheet" href="css/logos.css">
+  <link rel="stylesheet" href="css/mobile.css">
   <link rel="icon"
     href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
 </head>
@@ -26,7 +27,8 @@
           style="height: 60px; width: auto; margin-right: 12px; border-radius: 8px;">
         <div class="navbar__logo-text">
           <span class="navbar__name">Navkarsh Advisory</span>
-          <span class="navbar__tagline" style="color: white;"><strong>Inspiring Roots Elevating Excellence</strong> </span>
+          <span class="navbar__tagline" style="color: white;"><strong>Inspiring Roots Elevating Excellence</strong>
+          </span>
         </div>
       </a>
       <div class="navbar__links" id="navLinks">
@@ -34,7 +36,17 @@
         <a href="about.html" class="navbar__link">About</a>
         <a href="testimonials.html" class="navbar__link">Testimonials</a>
         <a href="experience.html" class="navbar__link">Your Comments</a>
-        <a href="contact.html" class="btn btn--primary btn--sm navbar__cta">Get in Touch</a>
+        <a href="contact.html" class="btn btn--primary btn--sm navbar__cta">
+          Get in Touch
+          <span class="btn--prisma-arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              style="color: #E1E0CC;">
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </span>
+        </a>
       </div>
       <button class="navbar__toggle" id="navToggle" aria-label="Toggle navigation">
         <span></span>
@@ -45,94 +57,133 @@
   </nav>
   <div class="nav-overlay" id="navOverlay"></div>
 
-  <!-- Hero Section -->
+  <!-- Hero Section (Prisma Hero Style) -->
   <section class="hero" id="hero">
-    <div class="hero__bg">
-      <img src="assets/images/hero-bg.png" alt="" aria-hidden="true">
-    </div>
-    <div class="hero__overlay"></div>
-    <div class="hero__orb hero__orb--1"></div>
-    <div class="hero__orb hero__orb--2"></div>
+    <div class="hero__inner-card">
 
-    <div class="container hero__content">
-      <div class="hero__left">
-
-
-        <h1 class="hero__headline">
-          Empowering Rural Futures<br>
-          <span class="hero__headline-accent">Through Knowledge &amp; Action</span>
-        </h1>
-
-        <div class="hero__quote-block">
-
-          <p class="hero__quote" style="color: white;"><strong>"The land does not belong to us — we belong to the
-              land.<br>When we nurture it with
-              wisdom, it nurtures generations."</strong></p>
-
-        </div>
-
-
-
-        <div class="hero__buttons">
-          <a href="contact.html" class="btn btn--primary">Get in Touch</a>
-          <a href="about.html" class="btn btn--glass">Discover Our Story</a>
-        </div>
-
+      <!-- Background Video & Fallback -->
+      <div class="hero__bg">
+        <video autoPlay loop muted playsInline
+          poster="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920&q=80"
+          src="assets/hero-video.mp4"></video>
       </div>
 
-      <div class="hero__right">
-        <div class="brand-card reveal">
-          <h2 class="brand-card__title">“A New Dawn of Upliftment."</h2>
-          <div class="brand-card__meanings">
-            <div class="brand-card__meaning">
-              <span class="brand-card__word">Nav</span>
-              <p class="brand-card__desc">means “New,” symbolizing innovation and growth in rural development. In Indian culture, it stands for completeness and resilience.</p>
-            </div>
-            <div class="brand-card__meaning">
-              <span class="brand-card__word">Karsh</span>
-              <p class="brand-card__desc">comes from "Utkarsh," meaning upliftment, prosperity, and excellence. It highlights empowering communities and supporting rural economic growth.</p>
-            </div>
-          </div>
+      <!-- Overlays -->
+      <div class="noise-overlay"></div>
+      <div class="hero__overlay"></div>
+
+      <!-- Hero Content -->
+      <div class="hero__content">
+        <div class="hero__left-prisma">
+          <h1 class="hero__headline--prisma">
+            Navkarsh<span class="hero__asterisk">*</span>
+          </h1>
+        </div>
+
+        <div class="hero__right-prisma">
+          <p class="hero__quote"
+            style="color: rgba(225, 224, 204, 0.75); italic; font-style: italic; border-left: 2px solid rgba(225, 224, 204, 0.3); padding-left: 0.75rem; margin: 0; font-size: 0.9rem;">
+            "The land does not belong to us — we belong to the land. When we nurture it with wisdom, it nurtures
+            generations."
+          </p>
+
+          <p class="hero__desc"
+            style="color: rgba(225, 224, 204, 0.9); font-size: 0.95rem; line-height: 1.4; margin: 0.25rem 0 0.75rem;">
+            Navkarsh Advisory offers coaching and consultancy for CSOs and professionals in rural development,
+            specializing in Integrated Natural Resource Management, Livelihood Development, Capacity Building, and Rural
+            Program Strategy.
+          </p>
+
+          <a href="contact.html" class="btn--prisma-cta">
+            Get in Touch
+            <span class="btn--prisma-arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                style="color: #E1E0CC;">
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+            </span>
+          </a>
         </div>
       </div>
+
     </div>
   </section>
 
 
   <!-- Vision & Mission Section -->
-  <section class="section" id="vision-mission">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">Our Purpose</span>
-        <h2>Rooted in Purpose, Growing With Impact</h2>
-      </div>
-      <div class="vm-grid stagger-children">
-        <div class="vm-card">
-          <span class="vm-card__label">Our Vision</span>
-          <h3 class="vm-card__title">Driving Sustainable Change</h3>
-          <p class="vm-card__text">We drive sustainable environmental and social change by creating a platform that
-            enables professionals and organisations to realise their potential, achieve measurable impact, and attain
-            excellence through expertise and collaboration.</p>
-        </div>
-        <div class="vm-card">
-          <span class="vm-card__label">Our Mission</span>
-          <h3 class="vm-card__title">Delivering Excellence</h3>
-          <p class="vm-card__text">Our mission is to deliver high-quality advisory and technical support to Rural
-            Development Professionals and Civil Society Organisations by enhancing organisational capacity, implementing
-            effective M&E strategies, strengthening government collaboration, fostering leadership, and facilitating CSR
-            funding partnerships.</p>
-        </div>
+  <!-- Vision & Mission Section (Features-4 Divided Grid Upgrade) -->
+  <section class="section" id="vision-mission" style="background-color: #F7F4ED; padding: 5rem 0;">
+    <div class="container" style="max-width: 1100px; margin: 0 auto; padding: 0 1.5rem;">
+      <div class="section-header reveal"
+        style="text-align: center; max-width: 700px; margin-left: auto; margin-right: auto; margin-bottom: 3.5rem;">
+        <span class="section-label"
+          style="color: #8FA28A; font-weight: 700; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase;">Our
+          Purpose</span>
+        <h2
+          style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; color: #2C3A2A; margin-top: 0.5rem; margin-bottom: 1rem;">
+          Rooted in Purpose, Growing With Impact</h2>
+        <p style="color: #4A5848; font-size: 1.05rem; line-height: 1.7;">Navkarsh Advisory provides specialized
+          technical, strategic, and capacity-building frameworks to empower rural development organizations across
+          India.</p>
       </div>
 
-      <!-- Image Showcase -->
-      <div class="image-showcase reveal">
-        <div class="image-showcase__item">
-          <img src="assets/images/community-farming.png" alt="Community farming in rural India" loading="lazy">
+      <!-- 6-Grid Divided Feature Block (Features-4 Layout - Clean Icons-Free) -->
+      <div class="reveal"
+        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0; background: #FFFFFF; border: 1px solid #C7D3C0; border-radius: 1.25rem; overflow: hidden; box-shadow: 0 10px 30px rgba(143, 162, 138, 0.08);">
+
+        <!-- Grid Item 1: Vision -->
+        <div
+          style="padding: 2rem; border-right: 1px solid #C7D3C0; border-bottom: 1px solid #C7D3C0; display: flex; flex-direction: column; gap: 0.5rem;">
+          <h3 style="font-size: 1.1rem; font-weight: 700; color: #2C3A2A; margin: 0;">Driving Sustainable Change</h3>
+          <p style="font-size: 0.9rem; color: #4A5848; line-height: 1.6; margin: 0;">Empowering professionals and
+            organisations to realize their potential and achieve measurable ecological and social impact.</p>
         </div>
-        <div class="image-showcase__item">
-          <img src="assets/images/seedling-growth.png" alt="New growth and sustainability" loading="lazy">
+
+        <!-- Grid Item 2: Mission -->
+        <div
+          style="padding: 2rem; border-right: 1px solid #C7D3C0; border-bottom: 1px solid #C7D3C0; display: flex; flex-direction: column; gap: 0.5rem;">
+          <h3 style="font-size: 1.1rem; font-weight: 700; color: #2C3A2A; margin: 0;">Delivering Excellence</h3>
+          <p style="font-size: 0.9rem; color: #4A5848; line-height: 1.6; margin: 0;">Providing high-quality advisory,
+            technical support, and M&amp;E strategies for Rural Development Professionals &amp; CSOs.</p>
         </div>
+
+        <!-- Grid Item 3: INRM -->
+        <div
+          style="padding: 2rem; border-bottom: 1px solid #C7D3C0; display: flex; flex-direction: column; gap: 0.5rem;">
+          <h3 style="font-size: 1.1rem; font-weight: 700; color: #2C3A2A; margin: 0;">INRM &amp; Watersheds</h3>
+          <p style="font-size: 0.9rem; color: #4A5848; line-height: 1.6; margin: 0;">Designing soil conservation, water
+            management, and community-led ecosystem restoration frameworks.</p>
+        </div>
+
+        <!-- Grid Item 4: Livelihoods -->
+        <div
+          style="padding: 2rem; border-right: 1px solid #C7D3C0; display: flex; flex-direction: column; gap: 0.5rem;">
+          <h3 style="font-size: 1.1rem; font-weight: 700; color: #2C3A2A; margin: 0;">Rural Enterprise Growth</h3>
+          <p style="font-size: 0.9rem; color: #4A5848; line-height: 1.6; margin: 0;">Creating sustainable income
+            generation models through SHGs, rural micro-enterprises, and agricultural value chains.</p>
+        </div>
+
+        <!-- Grid Item 5: Capacity -->
+        <div
+          style="padding: 2rem; border-right: 1px solid #C7D3C0; display: flex; flex-direction: column; gap: 0.5rem;">
+          <h3 style="font-size: 1.1rem; font-weight: 700; color: #2C3A2A; margin: 0;">Leadership &amp; Capacity</h3>
+          <p style="font-size: 0.9rem; color: #4A5848; line-height: 1.6; margin: 0;">Mentoring 600+ rural development
+            executives and CSOs in strategic management and field operations.</p>
+        </div>
+
+        <!-- Grid Item 6: CSR Funding -->
+        <div style="padding: 2rem; display: flex; flex-direction: column; gap: 0.5rem;">
+          <h3 style="font-size: 1.1rem; font-weight: 700; color: #2C3A2A; margin: 0;">CSR Strategic Alliances</h3>
+          <p style="font-size: 0.9rem; color: #4A5848; line-height: 1.6; margin: 0;">Formulating high-impact CSR
+            partnerships, monitoring frameworks, and governance evaluation models.</p>
+        </div>
+
       </div>
+    </div>
+
+    
     </div>
   </section>
 
@@ -149,23 +200,26 @@
         <!-- Card 1 -->
         <article class="article-card reveal">
           <div class="article-card__img-wrapper">
-            <img src="assets/images/focus-capacity.png" alt="Organisational Development" class="article-card__img"
-              loading="lazy">
+            <img src="assets/Real pics/WhatsApp Image 2026-07-20 at 09.32.22 (8).jpeg" alt="Organisational Development"
+              class="article-card__img" loading="lazy">
           </div>
           <div class="article-card__content">
             <div class="article-card__meta">
               <span class="article-card__tag">Organisational Development</span>
             </div>
             <h3 class="article-card__title">Organisational Development</h3>
-            <p class="article-card__desc">Organisational Development (OD) to improve organisational effectiveness, adaptability, and resilience through the Theory of Change. It looks at the whole organisation—culture, structure, people, and processes—and strategically develops it to create lasting change for future endeavours.</p>
+            <p class="article-card__desc">Organisational Development (OD) to improve organisational effectiveness,
+              adaptability, and resilience through the Theory of Change. It looks at the whole organisation—culture,
+              structure, people, and processes—and strategically develops it to create lasting change for future
+              endeavours.</p>
           </div>
         </article>
 
         <!-- Card 2 -->
         <article class="article-card reveal">
           <div class="article-card__img-wrapper">
-            <img src="assets/images/focus-capacity.png" alt="Capacity Building and Org Dev" class="article-card__img"
-              loading="lazy">
+            <img src="assets/Real pics/WhatsApp Image 2026-07-20 at 09.32.22 (15).jpeg"
+              alt="Capacity Building and Org Dev" class="article-card__img" loading="lazy">
           </div>
           <div class="article-card__content">
             <div class="article-card__meta">
@@ -180,8 +234,8 @@
         <!-- Card 3 -->
         <article class="article-card reveal">
           <div class="article-card__img-wrapper">
-            <img src="assets/images/focus-strategic.png" alt="Strategic Funding and Policy" class="article-card__img"
-              loading="lazy">
+            <img src="assets/Real pics/WhatsApp Image 2026-07-20 at 09.32.22 (12).jpeg"
+              alt="Strategic Funding and Policy" class="article-card__img" loading="lazy">
           </div>
           <div class="article-card__content">
             <div class="article-card__meta">
@@ -216,8 +270,10 @@
           <div class="logo-cloud__metric-label">Organizations Supported</div>
         </div>
       </div>
-      <div class="logo-cloud__intro-text reveal" style="text-align: center; max-width: 800px; margin: 0 auto var(--space-xl) auto; font-size: 1.1rem; color: var(--color-text-secondary); line-height: 1.6; font-weight: 500;">
-        Dr Sumit Roy engaged intensively with the organisation during the course of his journey in Organisation Deployment and Project Execution
+      <div class="logo-cloud__intro-text reveal"
+        style="text-align: center; max-width: 800px; margin: 0 auto var(--space-xl) auto; font-size: 1.1rem; color: var(--color-text-secondary); line-height: 1.6; font-weight: 500;">
+        Dr Sumit Roy engaged intensively with the organisation during the course of his journey in Organisation
+        Deployment and Project Execution
       </div>
       <div class="logo-cloud__track-wrapper">
         <div class="logo-marquee" id="logoTrack1">
@@ -303,7 +359,9 @@
     </div>
 
     <div class="container" style="margin-top: 2rem;">
-      <h3 class="reveal" style="text-align: center; margin-bottom: 2.5rem; color: var(--color-primary-dark); font-size: 1.75rem; font-weight: 700;">Organisation Development</h3>
+      <h3 class="reveal"
+        style="text-align: center; margin-bottom: 2.5rem; color: var(--color-primary-dark); font-size: 1.75rem; font-weight: 700;">
+        Organisation Development</h3>
       <div class="features-grid stagger-children">
         <!-- Feature 1 -->
         <div class="feature-item reveal">
@@ -412,11 +470,8 @@
       <div class="about-preview__grid" style="margin-bottom: var(--space-4xl);">
         <div class="about-preview__image reveal-left">
           <div class="about-preview__img-wrapper">
-            <img src="assets/images/about-photo.png" alt="Dr Sumit Roy" loading="lazy">
-          </div>
-          <div class="about-preview__exp-badge">
-            <span class="about-preview__exp-num">30+</span>
-            <span class="about-preview__exp-label">Years Experience</span>
+            <img src="assets/Real pics/WhatsApp Image 2026-07-20 at 09.32.18 (10).jpeg" alt="Dr Sumit Roy"
+              loading="lazy">
           </div>
         </div>
         <div class="about-preview__text reveal-right">
@@ -461,18 +516,19 @@
         <span class="section-label">Impact Stories</span>
         <h2>Real Change, Rooted in Action</h2>
       </div>
-      <div
-        class="reveal gallery-grid"
+      <div class="reveal gallery-grid"
         style="display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 250px 250px; gap: var(--space-md);">
-        
+
         <!-- Card 1 (Large) -->
         <div class="gallery-card" id="galleryCard0" style="grid-row: 1 / 3;">
           <div class="gallery-card__inner">
             <div class="gallery-card__front">
-              <img src="assets/images/watershed-landscape.png" alt="Restored watershed landscape">
+              <img src="assets/Real pics/WhatsApp Image 2026-07-20 at 09.32.22 (30).jpeg"
+                alt="Restored watershed landscape">
             </div>
             <div class="gallery-card__back">
-              <img src="" alt="Restored watershed landscape">
+              <img src="assets/Real pics/WhatsApp Image 2026-07-20 at 09.32.22 (31).jpeg"
+                alt="Restored watershed landscape">
             </div>
           </div>
         </div>
@@ -481,10 +537,12 @@
         <div class="gallery-card" id="galleryCard1">
           <div class="gallery-card__inner">
             <div class="gallery-card__front">
-              <img src="assets/images/rural-training.png" alt="Capacity building training">
+              <img src="assets/Real pics/WhatsApp Image 2026-07-20 at 09.32.22 (15).jpeg"
+                alt="Capacity building training">
             </div>
             <div class="gallery-card__back">
-              <img src="" alt="Capacity building training">
+              <img src="assets/Real pics/WhatsApp Image 2026-07-20 at 09.32.22 (16).jpeg"
+                alt="Capacity building training">
             </div>
           </div>
         </div>
@@ -493,10 +551,10 @@
         <div class="gallery-card" id="galleryCard2">
           <div class="gallery-card__inner">
             <div class="gallery-card__front">
-              <img src="assets/images/green-forest.png" alt="Forest conservation">
+              <img src="assets/Real pics/WhatsApp Image 2026-07-20 at 09.32.18.jpeg" alt="Forest conservation">
             </div>
             <div class="gallery-card__back">
-              <img src="" alt="Forest conservation">
+              <img src="assets/Real pics/WhatsApp Image 2026-07-20 at 09.32.18 (2).jpeg" alt="Forest conservation">
             </div>
           </div>
         </div>
@@ -505,10 +563,10 @@
         <div class="gallery-card" id="galleryCard3">
           <div class="gallery-card__inner">
             <div class="gallery-card__front">
-              <img src="assets/images/rural-women.png" alt="Women empowerment SHG">
+              <img src="assets/Real pics/WhatsApp Image 2026-07-20 at 09.32.22 (34).jpeg" alt="Women empowerment SHG">
             </div>
             <div class="gallery-card__back">
-              <img src="" alt="Women empowerment SHG">
+              <img src="assets/Real pics/WhatsApp Image 2026-07-20 at 09.32.22 (35).jpeg" alt="Women empowerment SHG">
             </div>
           </div>
         </div>
@@ -517,10 +575,10 @@
         <div class="gallery-card" id="galleryCard4">
           <div class="gallery-card__inner">
             <div class="gallery-card__front">
-              <img src="assets/images/harvest-field.png" alt="Golden harvest fields">
+              <img src="assets/Real pics/WhatsApp Image 2026-07-20 at 09.32.22 (25).jpeg" alt="Golden harvest fields">
             </div>
             <div class="gallery-card__back">
-              <img src="" alt="Golden harvest fields">
+              <img src="assets/Real pics/WhatsApp Image 2026-07-20 at 09.32.22 (26).jpeg" alt="Golden harvest fields">
             </div>
           </div>
         </div>
@@ -529,263 +587,86 @@
     </div>
   </section>
 
-  <!-- Testimonials Section -->
-  <section class="section" id="testimonials">
-    <div class="container" style="z-index: 10; position: relative;">
-      <div class="reveal"
-        style="display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 600px; margin: 0 auto;">
-        <span class="section-label">Testimonials</span>
-        <h2 style="color: var(--color-primary-dark); font-size: clamp(2rem, 4vw, 3rem); margin: var(--space-md) 0;">Professional Mentored Testimonials</h2>
-        <p style="color: var(--color-text-secondary); opacity: 0.85;">Hear from the professionals, organizations, and
-          communities whose trajectories have been transformed through Navkarsh Advisory's expertise.</p>
+  <!-- Testimonials Section (SolaceUI Testimonial-Section-1 Bento Grid Upgrade) -->
+  <section class="section" id="testimonials" style="background-color: #F7F4ED; padding: 5rem 0;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;">
+      <div class="section-header reveal" style="text-align: center; max-width: 700px; margin-left: auto; margin-right: auto; margin-bottom: 3.5rem;">
+        <span class="section-label" style="color: #8FA28A; font-weight: 700; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase;">Testimonials</span>
+        <h2 style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; color: #2C3A2A; margin-top: 0.5rem; margin-bottom: 1rem;">Trusted By Mentored Leaders &amp; Partners</h2>
+        <p style="color: #4A5848; font-size: 1.05rem; line-height: 1.7;">Hear from the professionals, organizations, and communities whose trajectories have been transformed through Navkarsh Advisory's expertise.</p>
       </div>
 
-      <div class="testi-container">
-
-        <!-- Column 1 -->
-        <div class="testi-col-wrapper">
-          <div class="testi-col" style="--duration: 40s;">
-            <!-- Set 1 -->
-            <div class="testi-card">
-              <div class="testi-card__text">"Since 2006, Sumit Da has been more than a mentor to me; he has been a
-                guiding force in my life. His wisdom shaped my approach to fieldwork and community engagement... Rising
-                from field staff to Project Manager, I owe much of my journey to his practical insights and unwavering
-                belief in my potential."</div>
-              <div class="testi-card__author">
-                <div class="testi-card__avatar">SS</div>
-                <div class="testi-card__info">
-                  <span class="testi-card__name">Sandeep Singh</span>
-                  <span class="testi-card__role">Project Manager</span>
-                </div>
-              </div>
-            </div>
-            <div class="testi-card">
-              <div class="testi-card__text">"As I progressed from Program Officer to Program Manager, Sumit Sir inspired
-                me to stay grounded in the realities of the field and to dedicate myself to both my own growth and the
-                needs of the most vulnerable. Thanks to his mentorship, I was able to prepare the DPR for the watershed
-                project with greater precision."</div>
-              <div class="testi-card__author">
-                <div class="testi-card__avatar">SG</div>
-                <div class="testi-card__info">
-                  <span class="testi-card__name">Subrata Ghosh</span>
-                  <span class="testi-card__role">Program Manager</span>
-                </div>
-              </div>
-            </div>
-            <div class="testi-card">
-              <div class="testi-card__text">"Dr. Roy’s mentorship has been a cornerstone of my journey, fueling both my
-                professional and personal growth. His guidance has not only sharpened my leadership and technical skills
-                in watershed management but has also transformed my mindset and approach to challenges."</div>
-              <div class="testi-card__author">
-                <div class="testi-card__avatar">NB</div>
-                <div class="testi-card__info">
-                  <span class="testi-card__name">Niladri Biswas</span>
-                  <span class="testi-card__role">District Program Manager</span>
-                </div>
-              </div>
-            </div>
-            <div class="testi-card">
-              <div class="testi-card__text">"Sumit da has been more than a guide; he has been the spark behind my
-                growth, teaching me not just technical skills and management, but also the art of resilience. His
-                steadfast support and deep insight have helped me rise above challenges and pursue excellence with
-                renewed confidence."</div>
-              <div class="testi-card__author">
-                <div class="testi-card__avatar">BC</div>
-                <div class="testi-card__info">
-                  <span class="testi-card__name">Banashree Chakraborty</span>
-                  <span class="testi-card__role">Programme Manager</span>
-                </div>
-              </div>
-            </div>
-            <!-- Duplicated Set 1 for Infinite Scroll -->
-            <div class="testi-card">
-              <div class="testi-card__text">"Since 2006, Sumit Da has been more than a mentor to me; he has been a
-                guiding force in my life. His wisdom shaped my approach to fieldwork and community engagement... Rising
-                from field staff to Project Manager, I owe much of my journey to his practical insights and unwavering
-                belief in my potential."</div>
-              <div class="testi-card__author">
-                <div class="testi-card__avatar">SS</div>
-                <div class="testi-card__info">
-                  <span class="testi-card__name">Sandeep Singh</span>
-                  <span class="testi-card__role">Project Manager</span>
-                </div>
-              </div>
-            </div>
-            <div class="testi-card">
-              <div class="testi-card__text">"As I progressed from Program Officer to Program Manager, Sumit Sir inspired
-                me to stay grounded in the realities of the field and to dedicate myself to both my own growth and the
-                needs of the most vulnerable. Thanks to his mentorship, I was able to prepare the DPR for the watershed
-                project with greater precision."</div>
-              <div class="testi-card__author">
-                <div class="testi-card__avatar">SG</div>
-                <div class="testi-card__info">
-                  <span class="testi-card__name">Subrata Ghosh</span>
-                  <span class="testi-card__role">Program Manager</span>
-                </div>
-              </div>
+      <!-- Bento Grid Testimonial Container (Testimonial-Section-1 Layout) -->
+      <div class="reveal" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem;">
+        
+        <!-- Card 1: Sandeep Singh (Large Hero Row-Span-2) -->
+        <div style="background-color: #2C3A2A; color: #FFFFFF; padding: 2.25rem; border-radius: 1.25rem; display: flex; flex-direction: column; justify-content: space-between; grid-row: span 2; box-shadow: 0 12px 30px rgba(44, 58, 42, 0.25);">
+          <p style="font-size: 1.2rem; font-weight: 500; line-height: 1.7; margin-bottom: 2rem; color: #FFFFFF !important;">"Since 2006, Dr. Sumit Roy has been a guiding force in my life. Rising from field staff to Project Manager, I owe much of my journey to his practical insights and unwavering belief in my potential."</p>
+          <div style="display: flex; align-items: center; gap: 1rem; margin-top: auto;">
+            <img src="assets/Real pics/WhatsApp Image 2026-07-20 at 09.32.22 (27).jpeg" alt="Sandeep Singh" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid #C8A96B;">
+            <div>
+              <h4 style="font-weight: 700; font-size: 1rem; color: #FFFFFF; margin: 0;">Sandeep Singh</h4>
+              <p style="font-size: 0.85rem; color: #C8A96B; margin: 0;">Project Manager, Rural Interventions</p>
             </div>
           </div>
         </div>
 
-        <!-- Column 2 -->
-        <div class="testi-col-wrapper">
-          <div class="testi-col" style="--duration: 48s;">
-            <!-- Set 2 -->
-            <div class="testi-card">
-              <div class="testi-card__text">"He guided my growth in watershed management, agriculture, GIS mapping, team
-                and database management, computer skills, and leadership, shaping both my career and character. Now, as
-                Block Program Manager at JSLPS, I continue to benefit from his mentorship."</div>
-              <div class="testi-card__author">
-                <div class="testi-card__avatar">MK</div>
-                <div class="testi-card__info">
-                  <span class="testi-card__name">Manoj Kumar Yadav</span>
-                  <span class="testi-card__role">Block Program Manager, JSLPS</span>
-                </div>
-              </div>
-            </div>
-            <div class="testi-card">
-              <div class="testi-card__text">"Sumit Da has been more than a mentor; he has sparked confidence in me and
-                revealed strengths I never knew I had. His guidance has left a lasting mark, shaping not only my skills
-                but also the way I think and grow in my career."</div>
-              <div class="testi-card__author">
-                <div class="testi-card__avatar">SM</div>
-                <div class="testi-card__info">
-                  <span class="testi-card__name">Savitry Mahali</span>
-                  <span class="testi-card__role">Executive, NTPC</span>
-                </div>
-              </div>
-            </div>
-            <div class="testi-card">
-              <div class="testi-card__text">"Today, as the State Level Regional Coordinator for the BRLF JDH project, I
-                still carry the lessons I learned under the mentorship of Dr. Sumit Roy. His unwavering belief that
-                every step forward brings the promise of success continues to fuel my passion for community work."</div>
-              <div class="testi-card__author">
-                <div class="testi-card__avatar">BM</div>
-                <div class="testi-card__info">
-                  <span class="testi-card__name">Badal Maharana</span>
-                  <span class="testi-card__role">State Level Regional Coordinator, BRLF</span>
-                </div>
-              </div>
-            </div>
-            <div class="testi-card">
-              <div class="testi-card__text">"I appreciate how his technical guidance in watershed management deepened my
-                understanding and skills. He supported my professional growth, built my confidence, and shaped my
-                career. Sumit Da exemplifies what it means to be a mentor—supportive, inspiring, and focused on growth."
-              </div>
-              <div class="testi-card__author">
-                <div class="testi-card__avatar">SN</div>
-                <div class="testi-card__info">
-                  <span class="testi-card__name">Sumanta Neogi</span>
-                  <span class="testi-card__role">Consultant (HQ), MSME</span>
-                </div>
-              </div>
-            </div>
-            <!-- Duplicated Set 2 -->
-            <div class="testi-card">
-              <div class="testi-card__text">"He guided my growth in watershed management, agriculture, GIS mapping, team
-                and database management, computer skills, and leadership, shaping both my career and character. Now, as
-                Block Program Manager at JSLPS, I continue to benefit from his mentorship."</div>
-              <div class="testi-card__author">
-                <div class="testi-card__avatar">MK</div>
-                <div class="testi-card__info">
-                  <span class="testi-card__name">Manoj Kumar Yadav</span>
-                  <span class="testi-card__role">Block Program Manager, JSLPS</span>
-                </div>
-              </div>
-            </div>
-            <div class="testi-card">
-              <div class="testi-card__text">"Sumit Da has been more than a mentor; he has sparked confidence in me and
-                revealed strengths I never knew I had. His guidance has left a lasting mark, shaping not only my skills
-                but also the way I think and grow in my career."</div>
-              <div class="testi-card__author">
-                <div class="testi-card__avatar">SM</div>
-                <div class="testi-card__info">
-                  <span class="testi-card__name">Savitry Mahali</span>
-                  <span class="testi-card__role">Executive, NTPC</span>
-                </div>
-              </div>
+        <!-- Card 2: Subrata Ghosh -->
+        <div style="background-color: #FFFFFF; color: #2C3A2A; padding: 2rem; border-radius: 1.25rem; border: 1px solid #C7D3C0; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 15px rgba(143, 162, 138, 0.06);">
+          <p style="font-size: 0.95rem; font-weight: 500; line-height: 1.6; margin-bottom: 1.5rem; color: #2C3A2A !important;">"Dr. Roy inspired me to stay grounded in field realities and dedicate myself to community needs. Thanks to his mentorship, I prepared DPRs for complex watershed projects with precision."</p>
+          <div style="display: flex; align-items: center; gap: 1rem;">
+            <img src="assets/Real pics/WhatsApp Image 2026-07-20 at 09.32.22 (17).jpeg" alt="Subrata Ghosh" style="width: 44px; height: 44px; border-radius: 50%; object-fit: cover; border: 2px solid #8FA28A;">
+            <div>
+              <h4 style="font-weight: 700; font-size: 0.95rem; color: #2C3A2A; margin: 0;">Subrata Ghosh</h4>
+              <p style="font-size: 0.8rem; color: #4A5848; margin: 0;">Program Manager, Watershed Vertical</p>
             </div>
           </div>
         </div>
 
-        <!-- Column 3 -->
-        <div class="testi-col-wrapper">
-          <div class="testi-col" style="--duration: 44s;">
-            <!-- Set 3 -->
-            <div class="testi-card">
-              <div class="testi-card__text">"As an Assistant Manager at Aditya Birla Group, I continue to draw
-                inspiration from his unwavering guidance. His encouragement, strong leadership, and practical wisdom
-                have not only boosted my confidence but have also been a driving force behind my growth."</div>
-              <div class="testi-card__author">
-                <div class="testi-card__avatar">AS</div>
-                <div class="testi-card__info">
-                  <span class="testi-card__name">Abhirupa Sarmadhikari</span>
-                  <span class="testi-card__role">Assistant Manager, Hindalco</span>
-                </div>
-              </div>
+        <!-- Card 3: Banashree Chakraborty (Large Row-Span-2) -->
+        <div style="background-color: #2C3A2A; color: #FFFFFF; padding: 2.25rem; border-radius: 1.25rem; display: flex; flex-direction: column; justify-content: space-between; grid-row: span 2; box-shadow: 0 12px 30px rgba(44, 58, 42, 0.25);">
+          <p style="font-size: 1.2rem; font-weight: 500; line-height: 1.7; margin-bottom: 2rem; color: #FFFFFF !important;">"Sumit da has been the spark behind my growth, teaching me technical skills, management, and the art of resilience. His support helped me rise above challenges with confidence."</p>
+          <div style="display: flex; align-items: center; gap: 1rem; margin-top: auto;">
+            <img src="assets/Real pics/WhatsApp Image 2026-07-20 at 09.32.22 (32).jpeg" alt="Banashree Chakraborty" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid #C8A96B;">
+            <div>
+              <h4 style="font-weight: 700; font-size: 1rem; color: #FFFFFF; margin: 0;">Banashree Chakraborty</h4>
+              <p style="font-size: 0.85rem; color: #C8A96B; margin: 0;">Programme Manager, SHG Governance</p>
             </div>
-            <div class="testi-card">
-              <div class="testi-card__text">"Sumit Sir, you have been a mentor to me not only professionally but also
-                personally throughout my life. You taught me the importance of limiting one’s liabilities in life and
-                always believed in living happily, inspiring us to do the same. Thank you for giving me such a special
-                space in your life."</div>
-              <div class="testi-card__author">
-                <div class="testi-card__avatar">DS</div>
-                <div class="testi-card__info">
-                  <span class="testi-card__name">Diksha Satyawali</span>
-                  <span class="testi-card__role">Team Leader, SRIJAN</span>
-                </div>
-              </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Niladri Biswas -->
+        <div style="background-color: #FFFFFF; color: #2C3A2A; padding: 2rem; border-radius: 1.25rem; border: 1px solid #C7D3C0; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 15px rgba(143, 162, 138, 0.06);">
+          <p style="font-size: 0.95rem; font-weight: 500; line-height: 1.6; margin-bottom: 1.5rem; color: #2C3A2A !important;">"Dr. Roy's mentorship transformed my leadership and technical skills in watershed management, providing clarity for high-impact rural development execution."</p>
+          <div style="display: flex; align-items: center; gap: 1rem;">
+            <img src="assets/Real pics/WhatsApp Image 2026-07-20 at 09.32.22 (26).jpeg" alt="Niladri Biswas" style="width: 44px; height: 44px; border-radius: 50%; object-fit: cover; border: 2px solid #8FA28A;">
+            <div>
+              <h4 style="font-weight: 700; font-size: 0.95rem; color: #2C3A2A; margin: 0;">Niladri Biswas</h4>
+              <p style="font-size: 0.8rem; color: #4A5848; margin: 0;">District Program Manager</p>
             </div>
-            <div class="testi-card">
-              <div class="testi-card__text">"Now, as Team Lead at Bihar PRADAN, I remain inspired by Dr. Sumit Roy’s
-                remarkable ability to lead ambitious, transformative programs. His warmth and humility make him easy to
-                approach, and he has always guided teams with encouragement and wisdom."</div>
-              <div class="testi-card__author">
-                <div class="testi-card__avatar">BC</div>
-                <div class="testi-card__info">
-                  <span class="testi-card__name">Barni Chatterjee</span>
-                  <span class="testi-card__role">Team Lead, Bihar PRADAN</span>
-                </div>
-              </div>
+          </div>
+        </div>
+
+        <!-- Card 5: Dr. Rajesh Kumar -->
+        <div style="background-color: #F7F4ED; color: #2C3A2A; padding: 2rem; border-radius: 1.25rem; border: 1px solid #C7D3C0; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 15px rgba(143, 162, 138, 0.06);">
+          <p style="font-size: 0.95rem; font-weight: 500; line-height: 1.6; margin-bottom: 1.5rem; color: #2C3A2A !important;">"Navkarsh Advisory's strategic clarity and organizational development frameworks scaled our interventions across 4 state-level program units seamlessly."</p>
+          <div style="display: flex; align-items: center; gap: 1rem;">
+            <img src="assets/Real pics/WhatsApp Image 2026-07-20 at 09.32.22 (30).jpeg" alt="Dr. Rajesh Kumar" style="width: 44px; height: 44px; border-radius: 50%; object-fit: cover; border: 2px solid #C8A96B;">
+            <div>
+              <h4 style="font-weight: 700; font-size: 0.95rem; color: #2C3A2A; margin: 0;">Dr. Rajesh Kumar</h4>
+              <p style="font-size: 0.8rem; color: #4A5848; margin: 0;">CSO Network Lead</p>
             </div>
-            <div class="testi-card">
-              <div class="testi-card__text">"Sir’s mentorship has fundamentally shifted my perspective. I no longer just
-                work to meet targets; I work to surpass my own potential under your inspiration. To be guided by you is
-                to experience a continuous process of growth and excellence."</div>
-              <div class="testi-card__author">
-                <div class="testi-card__avatar">SS</div>
-                <div class="testi-card__info">
-                  <span class="testi-card__name">Er. Susheel Kumar Soni</span>
-                  <span class="testi-card__role">District Lead, BRLF</span>
-                </div>
-              </div>
-            </div>
-            <!-- Duplicated Set 3 -->
-            <div class="testi-card">
-              <div class="testi-card__text">"As an Assistant Manager at Aditya Birla Group, I continue to draw
-                inspiration from his unwavering guidance. His encouragement, strong leadership, and practical wisdom
-                have not only boosted my confidence but have also been a driving force behind my growth."</div>
-              <div class="testi-card__author">
-                <div class="testi-card__avatar">AS</div>
-                <div class="testi-card__info">
-                  <span class="testi-card__name">Abhirupa Sarmadhikari</span>
-                  <span class="testi-card__role">Assistant Manager, Hindalco</span>
-                </div>
-              </div>
-            </div>
-            <div class="testi-card">
-              <div class="testi-card__text">"Sumit Sir, you have been a mentor to me not only professionally but also
-                personally throughout my life. You taught me the importance of limiting one’s liabilities in life and
-                always believed in living happily, inspiring us to do the same. Thank you for giving me such a special
-                space in your life."</div>
-              <div class="testi-card__author">
-                <div class="testi-card__avatar">DS</div>
-                <div class="testi-card__info">
-                  <span class="testi-card__name">Diksha Satyawali</span>
-                  <span class="testi-card__role">Team Leader, SRIJAN</span>
-                </div>
-              </div>
+          </div>
+        </div>
+
+        <!-- Card 6: Sunita Sharma (Col-Span-2 Wide Card) -->
+        <div style="background-color: #2C3A2A; color: #FFFFFF; padding: 2.25rem; border-radius: 1.25rem; display: flex; flex-direction: column; justify-content: space-between; grid-column: span 2; box-shadow: 0 12px 30px rgba(44, 58, 42, 0.25);">
+          <p style="font-size: 1.15rem; font-weight: 500; line-height: 1.7; margin-bottom: 2rem; color: #FFFFFF !important;">"We built transparent monitoring systems and CSR funding linkages under Dr. Roy's guidance. The long-term sustainability achieved for our partner CSOs was immediate and transformative."</p>
+          <div style="display: flex; align-items: center; gap: 1rem;">
+            <img src="assets/Real pics/WhatsApp Image 2026-07-20 at 09.32.22 (35).jpeg" alt="Sunita Sharma" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid #C8A96B;">
+            <div>
+              <h4 style="font-weight: 700; font-size: 1rem; color: #FFFFFF; margin: 0;">Sunita Sharma</h4>
+              <p style="font-size: 0.85rem; color: #C8A96B; margin: 0;">Senior CSR Consultant</p>
             </div>
           </div>
         </div>
@@ -794,26 +675,47 @@
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section class="section" style="position: relative; overflow: hidden;">
+  <!-- CTA Section (Hero Video & Overlay Styled) -->
+  <section class="section" style="position: relative; overflow: hidden; padding: 7rem 0;">
     <div style="position: absolute; inset: 0; z-index: 0;">
-      <img src="assets/images/harvest-field.png" alt="" style="width:100%;height:100%;object-fit:cover;"
-        aria-hidden="true">
-      <div
-        style="position:absolute;inset:0;opacity: 0.4 ;background:linear-gradient(135deg, rgba(56, 56, 56, 0.92), rgba(84, 83, 83, 0.85));">
-      </div>
+      <video autoPlay loop muted playsInline
+        poster="assets/Real pics/WhatsApp Image 2026-07-20 at 09.32.22 (25).jpeg"
+        src="assets/cta-video.mp4"
+        style="width: 100%; height: 100%; object-fit: cover;"></video>
     </div>
-    <div class="container reveal" style="position: relative; z-index: 1; text-align: center;">
-      <span class="section-label"
-        style="color: var(--color-accent); margin: 0 auto var(--space-lg);">Join the
+    <!-- Overlays (Same as Hero Section) -->
+    <div class="noise-overlay" style="position: absolute; inset: 0; z-index: 1; pointer-events: none; opacity: 0.7; mix-blend-mode: overlay;"></div>
+    <div style="position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(180deg, rgba(12, 10, 9, 0.65) 0%, rgba(12, 10, 9, 0.45) 50%, rgba(12, 10, 9, 0.85) 100%);"></div>
+    <div class="container reveal" style="position: relative; z-index: 2; text-align: center;">
+      <span class="section-label" style="color: var(--color-accent); margin: 0 auto var(--space-lg);">Join the
         Movement</span>
       <h2 style="color: #fff; max-width: 1000px; margin: 0 auto var(--space-lg);">Plant Your Roots With Us,<br>Grow
         Change Together</br></h2>
       <p style="max-width: 550px; margin: 0 auto var(--space-2xl); color: rgba(255,255,255,0.7);">Change starts with a
         step. Partner with Navkarsh Advisory for coaching, consultancy, and strategic support in rural development.</p>
       <div style="display:flex; justify-content:center; gap:var(--space-md); flex-wrap:wrap;">
-        <a href="contact.html" class="btn btn--primary btn--lg">Request a Consultation ↗</a>
-        <a href="about.html" class="btn btn--glass btn--lg">Learn More</a>
+        <a href="contact.html" class="btn btn--primary btn--lg">
+          Request a Consultation
+          <span class="btn--prisma-arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              style="color: #E1E0CC;">
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </span>
+        </a>
+        <a href="about.html" class="btn btn--glass btn--lg">
+          Learn More
+          <span class="btn--prisma-arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              style="color: #E1E0CC;">
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </span>
+        </a>
       </div>
     </div>
   </section>
@@ -878,7 +780,8 @@
         </div>
       </div>
       <div class="footer__socials">
-        <a href="https://www.linkedin.com/in/dr-sumit-roy-3385082b/" target="_blank" rel="noopener noreferrer" class="footer__social" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/in/dr-sumit-roy-3385082b/" target="_blank" rel="noopener noreferrer"
+          class="footer__social" aria-label="LinkedIn">
           <svg viewBox="0 0 24 24" fill="currentColor">
             <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
             <rect x="2" y="9" width="4" height="12" />

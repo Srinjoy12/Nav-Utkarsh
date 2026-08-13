@@ -5,10 +5,11 @@
 /* --- Form Container --- */
 .form-container {
   background: var(--color-surface);
-  border-radius: var(--radius-xl);
+  border-radius: 1.5rem;
   padding: var(--space-3xl);
-  box-shadow: var(--shadow-md);
-  border: 1px solid var(--color-border-light);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--color-border);
+  color: var(--color-primary);
   max-width: 720px;
   margin: 0 auto;
 }
@@ -24,7 +25,7 @@
 .form-section {
   margin-bottom: var(--space-2xl);
   padding-bottom: var(--space-2xl);
-  border-bottom: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .form-section:last-of-type {
@@ -49,7 +50,7 @@
 .form-section__title {
   font-family: var(--font-heading);
   font-size: var(--fs-h4);
-  color: var(--color-text);
+  color: var(--color-primary);
   margin-bottom: var(--space-sm);
   display: flex;
   align-items: center;
@@ -60,8 +61,8 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
-  color: #FFFFFF;
+  background: var(--color-primary);
+  color: #E1E0CC;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -99,12 +100,12 @@
   display: block;
   font-size: var(--fs-small);
   font-weight: 600;
-  color: var(--color-text);
+  color: var(--color-primary);
   margin-bottom: var(--space-sm);
 }
 
 .form-label .required {
-  color: var(--color-error);
+  color: #dc2626;
   margin-left: 2px;
 }
 
@@ -123,10 +124,10 @@
   padding: 0.8rem 1rem;
   font-family: var(--font-body);
   font-size: var(--fs-small);
-  color: var(--color-text);
-  background: var(--color-bg);
+  color: var(--color-primary);
+  background: #EAE9D8;
   border: 1.5px solid var(--color-border);
-  border-radius: var(--radius-md);
+  border-radius: 0.75rem;
   transition: all var(--transition-base);
   outline: none;
 }
@@ -135,8 +136,8 @@
 .form-select:focus,
 .form-textarea:focus {
   border-color: var(--color-primary);
-  background: var(--color-surface);
-  box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.1);
+  background: #FFFFFF;
+  box-shadow: 0 0 0 3px rgba(26, 46, 26, 0.12);
 }
 
 .form-input::placeholder,

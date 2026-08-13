@@ -63,11 +63,14 @@ const logos = [
 
 export default function PartnersSection() {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-[#F7F4ED] text-[#2C3A2A]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Our Partners & Collaborators</h2>
-          <p className="text-muted-foreground max-width-2xl mx-auto">
+          <span className="font-bold text-xs uppercase tracking-[0.2em] text-[#8FA28A] block mb-2">
+            Partnerships
+          </span>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#2C3A2A] mb-4">Our Partners &amp; Collaborators</h2>
+          <p className="text-[#4A5848] max-w-2xl mx-auto">
             Working together with leading organizations across India to drive sustainable rural transformation.
           </p>
         </div>
