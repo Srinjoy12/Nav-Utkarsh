@@ -1,11 +1,15 @@
-# Local Netlify folder
-.netlify
+# Build output
+dist/
 
 # Dependencies
 node_modules/
+
+# Local Netlify folder
+.netlify
 
 # Local backups and system files
 assets/images_backup/
 .DS_Store
 **/.DS_Store
+
 

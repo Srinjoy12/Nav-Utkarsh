@@ -28,13 +28,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Close menu on link click
-    navLinks.querySelectorAll('.navbar__link').forEach(link => {
+    navLinks.querySelectorAll('.navbar__link, .btn').forEach(link => {
       link.addEventListener('click', () => {
         toggle.classList.remove('active');
         navLinks.classList.remove('open');
         if (overlay) overlay.classList.remove('active');
         document.body.style.overflow = '';
       });
+    });
+
+    // Close mobile menu on window resize to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768 && navLinks.classList.contains('open')) {
+        toggle.classList.remove('active');
+        navLinks.classList.remove('open');
+        if (overlay) overlay.classList.remove('active');
+        document.body.style.overflow = '';
+      }
     });
   }
 
