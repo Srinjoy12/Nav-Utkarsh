@@ -114,6 +114,7 @@ html {
   overflow-x: hidden;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28' fill='none'%3E%3Cpath d='M3 3C3 3 10 3 16 8C22 13 24 20 24 20C24 20 17 22 11 16C5 10 3 3 3 3Z' fill='%238FA28A' stroke='%231A2E1A' stroke-width='1.8' stroke-linejoin='round'/%3E%3Cpath d='M3 3L15 15' stroke='%231A2E1A' stroke-width='1.8' stroke-linecap='round'/%3E%3Cpath d='M9 9C12 8 16 7.5 19 8.5' stroke='%231A2E1A' stroke-width='1.2' stroke-linecap='round' opacity='0.6'/%3E%3Cpath d='M15 15C16 18 17.5 21 19.5 23' stroke='%231A2E1A' stroke-width='1.2' stroke-linecap='round' opacity='0.6'/%3E%3C/svg%3E") 3 3, default;
 }
 
 html::-webkit-scrollbar {
@@ -129,6 +130,35 @@ body {
   overflow-x: hidden;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28' fill='none'%3E%3Cpath d='M3 3C3 3 10 3 16 8C22 13 24 20 24 20C24 20 17 22 11 16C5 10 3 3 3 3Z' fill='%238FA28A' stroke='%231A2E1A' stroke-width='1.8' stroke-linejoin='round'/%3E%3Cpath d='M3 3L15 15' stroke='%231A2E1A' stroke-width='1.8' stroke-linecap='round'/%3E%3Cpath d='M9 9C12 8 16 7.5 19 8.5' stroke='%231A2E1A' stroke-width='1.2' stroke-linecap='round' opacity='0.6'/%3E%3Cpath d='M15 15C16 18 17.5 21 19.5 23' stroke='%231A2E1A' stroke-width='1.2' stroke-linecap='round' opacity='0.6'/%3E%3C/svg%3E") 3 3, default;
+}
+
+/* Custom Pointer Cursor for Interactive Elements */
+a,
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+select,
+.btn,
+.btn--primary,
+.btn--secondary,
+.btn--prisma-cta,
+.navbar__link,
+.navbar__brand,
+.navbar__toggle,
+.footer__link,
+.footer__social,
+.gallery-card,
+.card,
+.vm-card,
+.focus-card,
+.expertise-card,
+.value-card,
+.hiw-card,
+[role="button"],
+[tabindex] {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28' fill='none'%3E%3Cpath d='M3 3C3 3 10 3 16 8C22 13 24 20 24 20C24 20 17 22 11 16C5 10 3 3 3 3Z' fill='%23C8A96B' stroke='%231A2E1A' stroke-width='1.8' stroke-linejoin='round'/%3E%3Cpath d='M3 3L15 15' stroke='%231A2E1A' stroke-width='1.8' stroke-linecap='round'/%3E%3Cpath d='M9 9C12 8 16 7.5 19 8.5' stroke='%231A2E1A' stroke-width='1.2' stroke-linecap='round' opacity='0.7'/%3E%3Cpath d='M15 15C16 18 17.5 21 19.5 23' stroke='%231A2E1A' stroke-width='1.2' stroke-linecap='round' opacity='0.7'/%3E%3C/svg%3E") 3 3, pointer !important;
 }
 
 body::-webkit-scrollbar {
